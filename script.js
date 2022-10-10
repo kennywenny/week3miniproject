@@ -5,29 +5,41 @@ const userChoice = prompt('Please make your choice of R, P or S')
 const computerChoice = getComputerChoice()
 
 if (userChoice === 'R' && computerChoice === 'S') {
-  // user wins
+  userWins()
 }
 if (userChoice === 'R' && computerChoice === 'P') {
-  // computer wins
+  computerWins()
 }
-if (userChoice === 'S' && computeChoice === 'R') {
-  // computer wins
+if (userChoice === 'S' && computerChoice === 'R') {
+  computerWins()
 }
 if (userChoice === 'S' && computerChoice === 'P') {
-  // user wins
+  userWins()
 }
 if (userChoice === 'P' && computerChoice === 'R') {
-  // user wins
+  userWins()
 }
 if (userChoice === 'P' && computerChoice === 'S') {
-  // computer wins
+  computerWins()
 }
 if (userChoice === computerChoice) {
-  // draw
+  draw()
 }
 
 console.log(`You chose ${userChoice}`)
 console.log(`I chose ${computerChoice}`)
+
+function userWins() {
+  alert('You won!')
+}
+
+function computerWins() {
+  alert('I won!')
+}
+
+function draw() {
+  alert('We drew!')
+}
 
 function getComputerChoice() {
   return 'R' //TODO: Make random
