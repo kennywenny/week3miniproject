@@ -55,5 +55,7 @@ function draw() {
 }
 
 function getComputerChoice() {
-  return 'R' //TODO: Make random
+  const possibleChoices = ['R', 'S', 'P']
+  const choice = possibleChoices[Math.floor(Math.random()* possibleChoices.length)]
+  return choice
 }
