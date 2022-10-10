@@ -1,8 +1,12 @@
-console.log('Hello world')
+let userWinsCount = 0
+let ties = 0
+let computerWinsCount = 0
 
 const userChoice = prompt('Please make your choice of R, P or S')
 
 const computerChoice = getComputerChoice()
+
+alert(`You chose ${userChoice}, I chose ${computerChoice}`)
 
 if (userChoice === 'R' && computerChoice === 'S') {
   userWins()
@@ -26,18 +30,21 @@ if (userChoice === computerChoice) {
   draw()
 }
 
-console.log(`You chose ${userChoice}`)
-console.log(`I chose ${computerChoice}`)
+alert(`You have won ${userWinsCount} times, I have won ${computerWinsCount} times, and we've tied ${ties} times`)
+
 
 function userWins() {
+  userWinsCount++
   alert('You won!')
 }
 
 function computerWins() {
+  computerWinsCount++
   alert('I won!')
 }
 
 function draw() {
+  ties++
   alert('We drew!')
 }
 
